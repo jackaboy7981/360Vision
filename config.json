@@ -1,0 +1,16 @@
+{
+    "X-Axis": [
+        -20,
+        20
+    ],
+    "Y-Axis": [
+        -20,
+        20
+    ],
+    "Z-Axis": [
+        0,
+        10
+    ],
+    "Category": [],
+    "CategoryColors": {}
+}

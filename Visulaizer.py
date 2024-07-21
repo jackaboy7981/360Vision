@@ -13,7 +13,7 @@ def _load_config():
             _config = json.load(file)
     return _config
 
-def visualizeFrame(xCord, yCord, lenght, widht, height, angle, category):
+def visualizeFrame(xCord, yCord, lenght, width, height, angle, category):
     '''Visualizing the 3d object position of surrounding objects along with the '''
     if category == 'Main':
         raise ValueError("Category cannot be Main")
@@ -28,15 +28,15 @@ def visualizeFrame(xCord, yCord, lenght, widht, height, angle, category):
     ax.set_zlabel("Z")
 
     drawBox(ax, 0,0, 4, 4, 2, 0, 'Main') #sensor car box
-    drawBox(ax, xCord, yCord, lenght, widht, height, angle, category)
+    drawBox(ax, xCord, yCord, lenght, width, height, angle, category)
     plt.show()
 
-def drawBox(ax, xCord, yCord, lenght, widht, height, angle, category, debugging = False):
+def drawBox(ax, xCord, yCord, lenght, width, height, angle, category, debugging = False):
     '''the boxes are drawn such that they rest on the x,y plain. 
         Angle:radiance'''
     config = _load_config()
-    halflength, halfwidht = lenght/2, widht/2
-    baseCord = np.array([[halfwidht, -halfwidht, -halfwidht, halfwidht],
+    halflength, halfwidth = lenght/2, width/2
+    baseCord = np.array([[halfwidth, -halfwidth, -halfwidth, halfwidth],
                         [halflength, halflength, -halflength, -halflength]]) #[x,y]
     sine , cosine = np.sin(angle), np.cos(angle)
     rotationMatrix = [[cosine, -sine],[sine, cosine]]

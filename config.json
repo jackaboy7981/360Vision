@@ -11,6 +11,12 @@
         0,
         10
     ],
-    "Category": [],
-    "CategoryColors": {}
+    "Category": [
+        "Main",
+        "Car"
+    ],
+    "CategoryColors": {
+        "Main": "Black",
+        "Car": "Red"
+    }
 }
